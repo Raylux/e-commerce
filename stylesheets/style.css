@@ -1,3 +1,89 @@
-*{
+:root{
+
+}
+
+body,
+button{
     font-family: 'Nunito', sans-serif;
 }
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.navbar,
+.navitems,
+.main,
+.footer {
+    display: flex;
+}
+
+.navbar {
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.navitems {
+    gap: 16px;
+    font-size: 19px;
+    font-weight: 800;
+    align-items: center;
+}
+
+#logo{
+    font-weight: 800;
+    font-size: 32px;
+    color: #53C9AB;
+}
+
+.news {
+    background: url("../media/keyboard-news2.png") no-repeat center center;
+    background-size: auto 100%;
+    height: 5000px;
+    color: white;
+    padding: 100px;
+}
+
+.news-title,
+.news-subtext{
+    text-shadow: 2px 4px 4px rgb(65, 65, 65);
+    margin: 0;
+}
+
+.news-title {
+    font-weight: 900;
+    font-size: 52px;
+}
+
+.news-subtext{
+    margin-top: 4px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.btn {
+    margin-top: 50px;
+    background-color: #53C9AB;
+    border:#53C9AB solid;
+    border-radius: 3px;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
