@@ -29,6 +29,7 @@ a{
 .navbar,
 .navitems,
 .main,
+.product-info,
 .footer {
     display: flex;
 }
@@ -45,10 +46,17 @@ a{
     align-items: center;
 }
 
+.testing {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 32px;
+}
+
 #logo{
     font-weight: 800;
     font-size: 32px;
     color: #53C9AB;
+    margin: auto 0;
 }
 
 .news {
@@ -87,3 +95,22 @@ a{
     font-size: 18px;
 }
 
+.main {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 150px 55px 250px;
+}
+
+.main img {
+    width: 360px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    justify-content: space-between;
+    font-weight: 1000;
+    font-size: 24px;
+}
