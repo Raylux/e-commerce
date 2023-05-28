@@ -1,0 +1,21 @@
+
+.container {
+    background-color: black;
+    height: 250px;
+}
+
+.header {
+    height: 109px;
+    background: url("../media/backgrounds/keyboards-header.webp") no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+    padding: 100px 55px;
+}
+
+.header-title {
+    font-size: 40px;
+    font-weight: 1000;
+    text-shadow: 2px 4px 4px rgb(116, 116, 116);
+    color: white;
+    margin: 0;
+}
