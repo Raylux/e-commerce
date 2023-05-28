@@ -9,6 +9,7 @@ button{
 
 body{
     margin: 0;
+    padding: 0;
     height: 100vh;
     /* display: flex;
     flex-direction: column;
@@ -162,6 +163,7 @@ a{
     font-size: 24px;
     margin-top: 12px;
     padding: 0 4px;
+    text-transform: uppercase;
 }
 
 .footer {
