@@ -36,7 +36,7 @@ function createProductVoice({name, price, quantity}){
     container.appendChild(itemprice);
     container.appendChild(itemquantity);
     container.appendChild(total);
-    container.appendChild(remove);
+    container.appendChild(remove);pp
 
     const body = document.querySelector(".cart-body");
     body.appendChild(container);
