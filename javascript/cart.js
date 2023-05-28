@@ -1,10 +1,9 @@
 const keys = Object.keys(localStorage)
-
 for (let key of keys) {
+    if(key == 'debug') continue;
     let item = JSON.parse(localStorage.getItem(key));
     createProductVoice(item);
 }
-
 
 function createProductVoice({name, price, quantity}){
     const container = document.createElement("div");
@@ -29,14 +28,14 @@ function createProductVoice({name, price, quantity}){
     const remove = document.createElement("div");
     remove.classList.add("product-remove");
     const removeimage = document.createElement("img");
-    removeimage.src = "/media/icons/trashbin.svg";
+    removeimage.src = "media/icons/trashbin.svg";
     remove.appendChild(removeimage);
 
     container.appendChild(title);
     container.appendChild(itemprice);
     container.appendChild(itemquantity);
     container.appendChild(total);
-    container.appendChild(remove);pp
+    container.appendChild(remove);
 
     const body = document.querySelector(".cart-body");
     body.appendChild(container);
