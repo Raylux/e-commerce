@@ -25,9 +25,36 @@ ul {
     list-style-type: none;
 }
 
-a{
+.section {
+    font-weight: 800;
+    font-size: 22px;
+    text-transform: capitalize;
     text-decoration: none;
     color: #000000;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+  }
+
+.section::before {
+    transition: 300ms;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #53C9AB;
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: 10px;
+}
+
+.section:hover::before {
+    width: 100%;
+}
+
+.section:hover{
+    opacity: 1;
 }
 
 .navbar,
@@ -51,11 +78,11 @@ a{
     align-items: center;
 }
 
-.testing {
+/* .testing {
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 32px;
-}
+} */
 
 #logo,
 .footer-title{
