@@ -35,18 +35,23 @@
         <h1 id="cart-title">Your Cart</h1>
         <div class="cart-info">
             <h3 id="product-voice">Product</h3>
+            <h3 id="remove-voice">Remove</h3>
             <h3 id="price-voice">Price</h3>
             <h3 id="quantity-voice">Quantity</h3>
-            <h3 id="total-voice">Total</h3>
-            <h3 id="remove-voice">Remove</h3>
+            <h3 id="total-voice">Subtotal</h3>
         </div>
-        <div class="cart-item">
-            <div class="product-title">Bla Bla Bla Bla</div>
-            <div class="product-price">100$</div>
-            <div class="product-quantity">10</div>
-            <div class="product-total">testing</div>
-            <div class="product-remove"><img src="media/icons/trashbin.svg" alt="remove"></div>
+
+        <div class="totalprice-box">
+            <div class="totalprice-voice">Total Price:</div>
+            <div class="totalprice"></div>
         </div>
+
+        <div class="interactions">
+            <button class="btn">CONTINUE SHOPPING</button>
+            <button class="btn" onclick="updateQuantities()">UPDATE</button>
+            <button class="btn">CHECK OUT</button>
+        </div>
+
     </div>
 
     <div class="footer">

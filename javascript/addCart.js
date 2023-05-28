@@ -1,3 +1,8 @@
+function buyProduct(product){
+    addToCart(product);
+    redirectToCart();
+}
+
 function addToCart(product){
     const quantity = Number(document.getElementById('quantity').value);
 
@@ -21,7 +26,7 @@ function addToCart(product){
             if(localStorage.getItem("oilking") == null){
                 let oilking = {
                     name: "Gateron Oil King",
-                    price: 0.65,
+                    price: 1,
                     quantity: quantity
                 }
                 localStorage.setItem("oilking", JSON.stringify(oilking));
@@ -36,7 +41,7 @@ function addToCart(product){
             if(localStorage.getItem("!!") == null){
                 let nixie = {
                     name: "Cherry MX Nixie",
-                    price: 0.75,
+                    price: 2,
                     quantity: quantity
                 }
                 localStorage.setItem("nixie", JSON.stringify(nixie));
@@ -125,4 +130,10 @@ function addToCart(product){
         default:
             console.log("Something Went Wrong!");
     }
+
+    redirectToCart();
+}
+
+function redirectToCart(){
+    location.assign("../cart.html");
 }

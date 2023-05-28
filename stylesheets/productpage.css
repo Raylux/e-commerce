@@ -18,6 +18,7 @@
     font-size: 48px;
     font-weight: 1000;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .subtitle {
@@ -41,6 +42,7 @@
     font-size: 18px;
     font-weight: 600;
     margin: 24px 0;
+    max-width: 450px;
 }
 
 #quantity {
@@ -55,20 +57,8 @@
     margin-right: 8px;
 }
 
-#buy {
-    font-weight: 800;
-    font-size: 18px;
-    height: 60px;
-    padding: 16px;
-    border: 2px solid #53C9AB;
-    border-radius: 3px;
-    background-color: #53C9AB;
-    color: white;
-    cursor: pointer;
-}
-
-#buy:hover {
-    background-color: #ffa742;
-    border-color: #ffa742;
-    transition: 200ms;
+.pricing {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(45, 45, 45);
 }

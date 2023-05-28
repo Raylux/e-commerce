@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/productpage.css">
+
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+    <script src="../javascript/addCart.js" defer></script>
+    <title>SweetKeys_</title>
+</head>
+<body>
+    <div class="navbar">
+        <a id="logo" href="../index.html">SweetKeys_</a>
+        <ul class="navitems">
+            <li><a class="section" href="../keyboards.html">Keyboards</a></li>
+            <li><a class="section" href="../keycaps.html">Keycaps</a></li>
+            <li><a class="section" href="../switches.html">Switches</a></li>
+            <li><a class="section" href="../deskmats.html">Deskmats</a></li>
+        </ul>
+        <ul class="navitems">
+            <li><a href="../cart.html"><img id="cart" src="../media/icons/shopping-bag.svg" alt="cart"></a></li>
+        </ul>
+    </div>
+
+    <div class="product-page">
+        <img src="../media/products/key-kobo-voc.webp" alt="Key Kobo VOC">
+        <div>
+            <h1 class="title">Key Kobo VOC</h1>
+            <h3 class="subtitle">Plastic Keyboard</h3>
+            <div class="status">IN STOCK</div>
+            <div class="pricing">$200</div>
+            <p class="description">This elegant look it's perfect for who seeks class<br>Limited time edition!</p>
+            <input id="quantity" type="number" min="1" value="1">
+            <button class="btn" onclick="addToCart('voc')">ADD TO CART</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="location">
+            <h3 class="footer-title">SweetKeys_</h3>
+            <p>Via Raffaele Sanzio 2,<br>Rho 20017,<br>Lombardia,<br>Italia</p>
+        </div>
+
+        <div class="company-info">
+            <h3 class="footer-title">Informations</h3>
+            <ul class="info-list">
+                <li>About us</li>
+                <li>Refunds</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
+        <div class="socialmedia">
+            <h3 class="footer-title">Follow us!</h3>
+            <ul class="socialmedia-list">
+                <li><a href="https://www.instagram.com/"><img src="../media/icons/instagram-icon.png" alt="instagram"></a></li>
+                <li><a href="https://twitter.com/"><img src="../media/icons/twitter-icon.png" alt="twitter"></a></li>
+                <li><a href="https://www.youtube.com/"><img src="../media/icons/youtube-icon.png" alt="youtube"></a></li>
+                <li><a href="https://www.tiktok.com/"><img src="../media/icons/tiktok-icon.png" alt="tiktok"></a></li>
+                <li><a href="https://www.discord.com/"><img src="../media/icons/discord-icon.png" alt="discord"></a></li>
+                <li><a href="https://www.facebook.com/"><img src="../media/icons/facebook-icon.png" alt="facebook"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
