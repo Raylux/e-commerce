@@ -1,5 +1,5 @@
 let httpRequest = new XMLHttpRequest();
-let url = "products.json";
+let url = "/products.json";
 
 httpRequest.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {

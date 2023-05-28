@@ -2,13 +2,16 @@
     padding: 200px;
     background-color: rgb(243, 243, 243);
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 45px;
 }
 
 .product-page img {
-    height: 450px;
-    width: 800px;
+    width: 600px;
+    height: auto;
     border-radius: 10px;
+    flex: 1;
 }
 
 .title {
