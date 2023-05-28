@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/productpage.css">
+    <link rel="stylesheet" href="/stylesheets/cart.css">
 
     <!--Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
 
-    <script src="/javascript/addCart.js" defer></script>
+    <script src="/javascript/cart.js" defer></script>
     <title>SweetKeys_</title>
 </head>
 <body>
@@ -26,20 +26,26 @@
         </ul>
         <ul class="navitems">
             <!-- <li><img id="search" src="media/icons/search-icon.svg" alt="search"></li> -->
-            <li><a href="/cart.html"><img id="cart" src="/media/icons/shopping-bag.svg" alt="cart"></a></li>
+            <li><a href=""><img id="cart" src="/media/icons/shopping-bag.svg" alt="cart"></a></li>
             <!-- <li><a href=""><img id="account" src="/media/icons/account.svg" alt="account"></a></li> -->
         </ul>
     </div>
 
-    <div class="product-page">
-        <img src="/media/products/gmk-olivia.webp" alt="GMK OLIVIA">
-        <div>
-            <h1 class="title">GMK OLIVIA</h1>
-            <h3 class="subtitle">ABS Double-Shot Keycaps</h3>
-            <div class="status">IN STOCK</div>
-            <p class="description">This set is the third release of this fan favorite keycaps set!<br>Made by Olivia herself, now available until july 2023!</p>
-            <input id="quantity" type="number" min="1" value="1">
-            <button id="buy" onclick="addToCart('olivia')">ADD TO CART</button>
+    <div class="cart-body">
+        <h1 id="cart-title">Your Cart</h1>
+        <div class="cart-info">
+            <h3 id="product-voice">Product</h3>
+            <h3 id="price-voice">Price</h3>
+            <h3 id="quantity-voice">Quantity</h3>
+            <h3 id="total-voice">Total</h3>
+            <h3 id="remove-voice">Remove</h3>
+        </div>
+        <div class="cart-item">
+            <div class="product-title">Bla Bla Bla Bla</div>
+            <div class="product-price">100$</div>
+            <div class="product-quantity">10</div>
+            <div class="product-total">testing</div>
+            <div class="product-remove"><img src="/media/icons/trashbin.svg" alt="remove"></div>
         </div>
     </div>
 
