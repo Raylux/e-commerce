@@ -11,8 +11,6 @@ const totalprice = document.querySelector(".totalprice");
 totalprice.innerText = "$" + total;
 
 
-
-
 function createProductVoice({name, price, quantity}){
     const container = document.createElement("div");
     container.classList.add("cart-item");
@@ -21,12 +19,12 @@ function createProductVoice({name, price, quantity}){
     title.classList.add("product-title");
     title.innerText = name;
 
-    const remove = document.createElement("div");
-    remove.classList.add("product-remove");
-    const removeimage = document.createElement("img");
-    removeimage.src = "media/icons/trashbin.svg";
-    removeimage.classList.add("remove-icon");
-    remove.appendChild(removeimage);
+    // const remove = document.createElement("div");
+    // remove.classList.add("product-remove");
+    // const removeimage = document.createElement("img");
+    // removeimage.src = "media/icons/trashbin.svg";
+    // removeimage.classList.add("remove-icon");
+    // remove.appendChild(removeimage);
 
     const itemprice = document.createElement("div");
     itemprice.classList.add("product-price");
@@ -47,7 +45,7 @@ function createProductVoice({name, price, quantity}){
     total.innerText = "$" + (quantity * price);
 
     container.appendChild(title);
-    container.appendChild(remove);
+    // container.appendChild(remove);
     container.appendChild(itemprice);
     container.appendChild(itemquantity);
     container.appendChild(total);
@@ -91,19 +89,24 @@ function updateCart(){
 
 }
 
-function removeButton(){
-
-}
-
 function toHomePage(){
     location.assign("index.html");
 }
 
 function sendOrder(){
     let mailbody = "";
-    for (let key of keys) {
+    for(let key of keys) {
         if(key == 'debug') continue;
         mailbody = mailbody + `${localStorage.getItem(key)}`;
     }
     location.href = `mailto:prova@gmail.com?body= ${mailbody}`;
 }
+
+// const removeButtonList = document.querySelectorAll(".remove-icon");
+// for(let i = 0; i < removeButtonList.length; i++){
+//     removeButtonList[i].addEventListener("click", removeButton);
+// }
+
+// function removeButton(){
+//     console.log("prova");
+// }
