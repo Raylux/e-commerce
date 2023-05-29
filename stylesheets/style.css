@@ -78,12 +78,6 @@ a{
     align-items: center;
 }
 
-/* .testing {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 32px;
-} */
-
 #logo,
 .footer-title{
     font-weight: 800;
