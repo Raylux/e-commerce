@@ -1,5 +1,4 @@
 let total = 0;
-
 const keys = Object.keys(localStorage)
 for (let key of keys) {
     if(key == 'debug') continue;
@@ -9,7 +8,10 @@ for (let key of keys) {
 }
 
 const totalprice = document.querySelector(".totalprice");
-    totalprice.innerText = "$" + total;
+totalprice.innerText = "$" + total;
+
+
+
 
 function createProductVoice({name, price, quantity}){
     const container = document.createElement("div");
@@ -23,6 +25,7 @@ function createProductVoice({name, price, quantity}){
     remove.classList.add("product-remove");
     const removeimage = document.createElement("img");
     removeimage.src = "media/icons/trashbin.svg";
+    removeimage.classList.add("remove-icon");
     remove.appendChild(removeimage);
 
     const itemprice = document.createElement("div");
@@ -55,12 +58,52 @@ function createProductVoice({name, price, quantity}){
     body.insertBefore(container, totalpricebox);
 }
 
+
+
 function updateCart(){
-    let itemsPrices = document.querySelectorAll(".product-price");
-    let quantities = document.querySelectorAll(".quantity-form");
+    let newTotalPrice = 0;
+    const cartitems = document.querySelectorAll(".cart-item");
+    const quantities = document.querySelectorAll(".quantity-form");
 
-    // for(let i = 0; i < newQuantities.length; i++){
-    //     if(quantities[])
-    // }
+    for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if(key == 'debug') continue;
+        let item = JSON.parse(localStorage.getItem(key));
+        if(quantities[i] == undefined) continue;
 
+        if(quantities[i].value == 0){
+            cartitems[i].remove();
+            localStorage.removeItem(key);
+            continue;
+        }
+
+        //update localstorage values
+        item.quantity = quantities[i].value;
+        newTotalPrice += item.quantity * item.price;
+        localStorage.setItem(key, JSON.stringify(item));
+
+        //update dom nodes
+        cartitems[i].childNodes[2].setAttribute("value", `${quantities[i].value}`);
+        cartitems[i].lastChild.innerText = `\$${quantities[i].value * item.price}`;
+    }
+
+    totalprice.innerText = "$" + newTotalPrice;
+
+}
+
+function removeButton(){
+
+}
+
+function toHomePage(){
+    location.assign("index.html");
+}
+
+function sendOrder(){
+    let mailbody = "";
+    for (let key of keys) {
+        if(key == 'debug') continue;
+        mailbody = mailbody + `${localStorage.getItem(key)}`;
+    }
+    location.href = `mailto:prova@gmail.com?body= ${mailbody}`;
 }
